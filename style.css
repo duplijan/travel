@@ -1,0 +1,610 @@
+/*** GLOBAL ***/
+* {
+  margin: 0;
+  padding: 0;
+}
+*,*::after, *::before {
+  box-sizing: border-box;
+}
+html {
+  box-sizing: inherit;
+}
+body {
+  font-family: 'Jaldi', sans-serif;
+}
+.wrap {
+  width: 90%;
+  height: auto;
+  margin: 50px auto;
+  overflow: hidden;
+}
+section {
+  width: 100%;
+  height: 50vh;
+  margin: 50px;
+  position: relative;
+}
+/******** NAV **************/
+
+.top-nav {
+  width: 100%;
+  height: auto;
+  position: relative;
+  text-align: right;
+  background-color: #FFD54F;
+  border-bottom: 2px solid #FFCA28;
+}
+.account-btns {
+  width: 90%;
+  margin: 0 auto;
+  height: auto;
+  padding: 20px;
+}
+.account-btns .signup, .login {
+  padding: 7px 16px;
+  margin: 0 5px;
+  border: 2px solid #FFC107;
+  background-color: #FFCA28;
+}
+.signup:hover {
+  opacity: 0.8;
+}
+.login:hover {
+  opacity: 0.8;
+}
+.account-btns .help {
+  padding: 7px 15px;
+  margin: 0 20px;
+  background-color: #FFC107;
+  border: 3px solid #FFB300;
+}
+.account-btns .signup, .login , .help {
+  border-radius: 10px;
+  color: #fff;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.account-btns .help:hover {
+  background-color: #FF6F00;
+}
+.navigation {
+  width: 100%;
+  height: auto;
+  //position: fixed;
+  text-align: left;
+  z-index: 10;
+  transition: all 0.5s;
+}
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+.nav {
+  width: 90%;
+  height: auto;
+  margin: 5px auto;
+  padding: 10px;
+}
+.nav-logo {
+  font-size: 5em;
+}
+.navigation a {
+  text-decoration: none;
+  color: #607D8B;
+  font-style: italic;
+  margin: 5px 20px;
+  padding: 5px 10px;
+  font-size: 1.5em;
+  transition: all 0.2s
+}
+.navigation a:hover {
+  border-bottom: 3px solid #FFCA28;
+}
+/********** HEADER ***********/
+header{
+  width: 100%;
+  height:auto;
+  position: relative;
+}
+.slide-wrap {
+  width: 90%;
+  height: 90vh;
+  margin: 0 auto;
+  position: relative;
+}
+.slide {
+  width: 100%;
+  height: 90%;
+  position: relative;
+  margin: 0 auto;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  border-radius: 4px;
+  transition: all 0.4s;
+  animation: fade 1.5s;
+}
+@keyframes fade {
+	0% {opacity: .2;}
+	100% {opacity: 1;}
+}
+.slide .slide-active {
+  opacity: 1
+}
+.slide1 {
+	background-image: url(img/slide1.jpg);
+}
+.slide2 {
+	background-image: url(img/slide2.jpg);
+}
+.slide3 {
+	background-image: url(img/slide3.jpg);
+}
+.slide-content {
+  background-color: #FFCA28;
+  padding: 20px;
+  text-align: center;
+  position: relative;
+  opacity: 0.8;
+}
+.slide-text {
+  font-size: 5rem;
+  color: #fff;
+  font-style: italic;
+}
+.arrow {
+  position: absolute;
+  cursor: pointer;
+  font-size: 2.5rem;
+  top: 40%;
+  z-index: 1;
+  color: #fff;
+  transition: all 0.2s;
+}
+.arrow:hover {
+  color: #ccc;
+}
+.arrow-left {
+  left: 20px;
+  transform: rotate(180deg);
+}
+.arrow-right {
+  right: 20px;
+}
+/********** BANNER ***********/
+.banner-wrap {
+  width: 100%;
+  height: auto;
+}
+.banner {
+  width: 90%;
+  height: 30vh;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  opacity: 0.8;
+}
+.banner-section {
+  flex: 1;
+  height: 95%;
+  margin: 0 3px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: all 0.3s;
+}
+.banner-section:hover {
+  transform: scale(1.02);
+  opacity: 0.9;
+}
+.banner-section h3 {
+  color: #fff;
+  font-size: 2.5em;
+  font-style: italic;
+  padding: 10px 30px;
+  margin-top: 10px;
+}
+.banner-btn {
+  display: inline-block;
+  margin: 5px 50px;
+  padding: 7px 15px;
+  background-color: #FFB74D;
+  border-radius: 10px;
+  color: #fff;
+  cursor: pointer;
+}
+.banner-btn:hover {
+  background-color: #FFA726;
+}
+.flights {
+  background-image:  url(./img/flight.jpg);
+  background-position: top;
+}
+.cruises {
+  background-image:  url(./img/cruise.jpg);
+  background-position: bottom;
+}
+.adventure {
+  background-image:  url(./img/diving.jpg)  ;
+}
+
+#destination, #last-minutes, #deals {
+  display: block;
+  width: 90%;
+  height: auto;
+  margin: 50px auto;
+  text-align: center;
+  font-size: 2.5em;
+  border-bottom: 5px solid #FFCA28;
+}
+/********** DESTINATIONS CARDS ***********/
+.destination {
+  width: 90%;
+  height: 60vh;
+  margin: 10px auto;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  text-align: center;
+  padding: 30px;
+  opacity: 0.9;
+}
+.destination1 {
+  background-image: url(./img/europe.jpg);
+}
+.destination2 {
+  background-image: url(./img/asia.jpg);
+}
+.destination3 {
+  background-image: url(./img/america.jpg);
+}
+.destination4 {
+  background-image: url(./img/africa.jpg);
+  background-position: bottom;
+}
+.box-top, .box-bottom {
+  padding: 30px;
+}
+.box-top-right {
+  width: 50%;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  height: 100%;
+  //background-color: #2196F3;
+  background-color: #FFA726;
+  z-index: 10;
+  transition: all 1s ease;
+}
+.box-active-right {
+  left: 0%;
+  background-color: #ef5350;
+}
+.box-top-left {
+  width: 50%;
+  position: absolute;
+  top: 0;
+  right: 50%;
+  height: 100%;
+  background-color: #ef5350;
+  z-index: 10;
+  transition: all 1s ease;
+}
+.box-active-left{
+  right: 0;
+  background-color: #2196F3;
+}
+.box-text {
+  padding: 30px;
+  opacity: 1;
+  text-align: left;
+}
+.box-text p {
+  color: #424242;
+  font-size: 1.2em;
+}
+.box-text h3{
+  font-size: 1.5em;
+  color: #fff;
+  margin: 30px 20px;
+}
+.box-text ul {
+  margin-left: 50px;
+  margin-top: 30px;
+}
+.box-text li {
+  margin: 10px 0;
+  padding: 5px 10px;
+  font-size: 1.2em;
+  color: #fff;
+}
+.box-bottom-right .box-text, .box-bottom-left .box-text{
+   width: 100%;
+   height: 100%;
+   background-color: rgb(0,0,0,0.4);
+ }
+.box-text h2 {
+  font-size: 3em;
+  padding: 20px 10px;
+  color: #fff;
+  font-style: italic;
+}
+.box-text p {
+  font-size: 1.2em;
+  padding: 20px 10px;
+}
+.box-bottom-left {
+  width: 50%;
+  position: absolute;
+  top: 0;
+  right: 50%;
+  height: 100%;
+}
+.box-bottom-right {
+  width: 50%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+}
+.box-bottom .box-text {
+  color: #fff;
+  background-color: rgb(0,0,0,0.4);
+  text-align: center;
+}
+.box-btn {
+  padding: 7px 20px;
+  background-color: #FFB74D;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 1.2em;
+  cursor: pointer;
+  position: absolute;
+  bottom: 10%;
+  left: 50px;
+}
+
+/********** OFFRES LAST MINUTE ***********/
+.last-minute {
+  width: 100%;
+  height: auto;
+}
+.offers-wrap {
+  width: 90%;
+  height: 40vh;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: minmax(20vh, auto);
+  text-align: center;
+  opacity: 0.8;
+}
+.offer {
+  grid-column: 1fr;
+  justify-content: center;
+  align-items: center;
+  height: 20vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: all 0.3s;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transform: scale(0.98);
+}
+.offer:hover {
+  transform: scale(1.02);
+  opacity: 0.9;
+}
+.offer:nth-child(1){
+  background-image:  url(./img/rome.jpg);
+}
+.offer:nth-child(2){
+  background-image:  url(./img/amsterdam.jpg);
+}
+.offer:nth-child(3){
+  background-image:  url(./img/prague.jpg);
+}
+.offer:nth-child(4){
+  background-image:  url(./img/barcelona.jpg);
+}
+.offer:nth-child(5){
+  background-image:  url(./img/canary.jpg);
+}
+.offer:nth-child(6){
+  background-image:  url(./img/thailand.jpg);
+}
+.offer:nth-child(7){
+  background-image:  url(./img/bali.jpg);
+}
+.offer:nth-child(8){
+  background-image:  url(./img/maldives.jpg);
+}
+
+.offer h3, .offer-price {
+  display: block;
+  height: 30%;
+  padding: 10px 0;
+  font-size: 2em;
+  color: #fff;
+  font-style: italic;
+}
+.offer-price {
+  color: #E65100;
+  font-size: 2.2em;
+  font-weight: bold;
+}
+.offer-btn, .deal-btn {
+  display: inline-block;
+  margin: 15px auto;
+  padding: 5px 15px;
+  background-color: #FFB74D;
+  border-radius: 10px;
+  color: #fff;
+  cursor: pointer;
+}
+.offer-btn:hover, .deal-btn:hover {
+  background-color: #FFA726;
+}
+/********** SEARCH ***********/
+.panel-search {
+  width: 100%;
+  height: 10vh;
+  line-height: 10vh;
+}
+.search {
+  width: 90%;
+  height: 100%;
+  margin: 50px auto;
+  background-color: #FFCA28;
+  text-align: center;
+}
+.search i {
+  color: #fff;
+  font-size: 1.2em;
+}
+.search input {
+  width: 300px;
+  padding: 7px;
+  margin-top:20px;
+  display: inline-block;
+}
+.search .search-btns {
+  display: inline-block;
+  margin-left: 50px
+}
+.search .search-btns span {
+  margin: 10px 20px;
+  padding: 7px 15px;
+  cursor: pointer;
+  color: #fff;
+  font-size: 1.2em;
+}
+/********** DEALS ***********/
+.deal-wrap {
+  width: 90%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: minmax(50vh, auto);
+  margin: 0 auto;
+  opacity: 0.9;
+}
+.deal {
+  grid-column: 1fr;
+  height:50vh;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  text-align: center;
+  transition: all 0.3s;
+}
+.deal:hover {
+  opacity: 0.85;
+}
+.deal .deal-status {
+  display: block;
+  width: 50%;
+  margin: 0 auto;
+  padding: 10px;
+  line-height: auto;
+  background-color: rgb(0,0,0,0.8);
+  color: #E65100;
+  font-weight: bold;
+}
+.deal h2 {
+  font-size: 2.5em;
+  margin-top: 20px;
+  color: #fff;
+  font-style: italic;
+}
+.deal ul {
+  width: 80%;
+  margin: 10px auto;
+  text-align: left;
+}
+.deal ul li {
+  padding: 7px 15px;
+  color: #fff;
+  font-size: 1.5em;
+  list-style: none;
+}
+.deal-btn {
+  padding: 10px 15px;
+}
+.deal1{
+  background-image: url(./img/kenya.jpg);
+}
+.deal2{
+  background-image: url(./img/greece.jpg);
+}
+.deal3{
+  background-image: url(./img/iceland.jpg);
+}
+.deal4 {
+  background-image: url(./img/peru.jpg);
+}
+
+/********** FOOTER ***********/
+footer {
+  width: 100%;
+  height: auto;
+  background-color: #FFCA28;
+}
+.footer {
+  width: 90%;
+  margin: 0 auto;
+}
+.footer h3 {
+  padding-top: 20px;
+  font-size: 1.5em;
+  font-style: italic;
+}
+.footer p, .footer li{
+  color: #424242;
+}
+.support-payment-group {
+  width: 100%;
+  height: auto;
+}
+.support-payment-group li {
+  padding: 7px;
+  font-style: italic;
+}
+.support-list, .payment-list {
+  text-align: left;
+}
+.support .option {
+  cursor: pointer;
+}
+.support .option:hover {
+  opacity: 0.8;
+}
+.payment-list li  {
+  margin: 10px 20px;
+  display: inline-block;
+}
+.payment-list .payment {
+  font-size: 1.5em;
+  color: #000;
+}
+.support li , .payment li {
+  list-style: none;
+}
+.soc-media {
+  height: auto;
+  text-align: center;
+}
+.soc-media i {
+  font-size: 2em;
+  margin: 20px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.soc-media i:hover {
+  opacity: 0.8;
+  transform: translateY(-5%);
+}
